@@ -87,10 +87,10 @@ p {
   transition: .3s linear;
 }
 .more-button:hover {
-  color: #ff6f5a;
+  color: darkorange;
 }
 .more-button:hover:before {
-  background: #ff6f5a;
+  background: darkorange;
 }
 
 
@@ -176,7 +176,7 @@ body {background: url(https://html5book.ru/wp-content/uploads/2015/07/background
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
-  text-align: center;
+
   letter-spacing: 3px;
   font-weight: 600;
   color: #524f4e;
@@ -185,7 +185,7 @@ body {background: url(https://html5book.ru/wp-content/uploads/2015/07/background
   transition: .3s;
 }
 .btn:hover {
-  background: deepskyblue;
+  background: darkorange;
   box-shadow: 0 15px 20px rgba(46,229,157,.4);
   color: white;
   transform: translateY(-7px);
@@ -295,7 +295,7 @@ body {background: url(https://html5book.ru/wp-content/uploads/2015/07/background
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #48ad6c;
+  background: white;
   opacity: 0;
   transition: .5s ease-in-out;
 }
@@ -306,7 +306,7 @@ body {background: url(https://html5book.ru/wp-content/uploads/2015/07/background
 .menu-main a:hover:before,
 .menu-main a:hover:after {opacity: 1;}
 .menu-main a.current,
-.menu-main a:hover {color: #48ad6c;}
+.menu-main a:hover {color: white;}
 @media(max-width:680px) {
   .menu-main li {display: block;}
 }
@@ -388,7 +388,7 @@ html, body{
     top: 0%;
     margin-left: -20px;
     margin-top: 0px;
-    background: #55e073;
+    background: darkorange;
     width: 8%;
     color: white;
     font-weight: 700;
@@ -397,13 +397,13 @@ html, body{
 
 .section-delivery{
     height: 300px;
-    background-color: darkseagreen;
+    background-color: orange;
     text-align: center;
     color: white;
 }
 
 .navbar-button{
-    background-color: #55e073;
+    background-color: darkorange;
     border: none;
     color: #d3fb05e8;
     border-radius: 0;
@@ -420,7 +420,7 @@ html, body{
 }
 
 .navbar-main{
-    background-color: #55e073;
+    background-color: orange;
     border: none;
     border-radius: 0;
 }
@@ -437,7 +437,7 @@ html, body{
     position: absolute;
     top: 50px;
     width: 100%;
-    background-color: #55e093;
+    background-color: white;
     z-index: 10;
     padding: 10px;
 }
