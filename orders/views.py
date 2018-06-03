@@ -70,7 +70,7 @@ def checkout(request):
             for name, value in data.items():
                 if name.startswith("product_in_basket_"):
                     product_in_basket_id = name.split("product_in_basket_")[1]
-                    print(product_in_basket_id)
+
                     product_in_basket = ProductInBasket.objects.get(id=product_in_basket_id)
 
                     print(type(value))

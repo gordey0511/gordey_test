@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^', include('landing.urls')),
     url(r'^', include('products.urls')),
     url(r'^', include('orders.urls')),
+
     url(r'^', include('message.urls')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^', include('post.urls'))

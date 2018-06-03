@@ -1,4 +1,9 @@
 {% load static %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -38,6 +43,7 @@
             <input onclick="product:window.location='http://178.128.161.17/'" type="button"
                    value="Вернуться на сайт"/>
         </div>
+        {% include 'post/post_single.html' %}
     </form>
 
 

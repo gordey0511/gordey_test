@@ -2,9 +2,9 @@
         Наш сайт еще не доделан, но мы работаем)))
 </nav>
 <ul class="menu-main">
-  <li><a href="http://178.128.161.17" class="current">Dream club</a></li>
+  <li><a href="http://dreamclubplay.com" class="current">Dream club</a></li>
   {% if not user.is_active %}
-  <li><a href="/accounts/login/">Авторизация</a></li>
+  <li><a href="/accounts/login/">Вход</a></li>
   <li><a href="/accounts/signup/">Регистрация</a></li>
   {% else %}
   <li><a href="/accounts/logout/">({{ user.username }}) Выйти</a></li>

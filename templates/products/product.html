@@ -3,6 +3,8 @@
 {% load bootstrap3 %}
 {% bootstrap_css %}
 {% load static %}
+{% load i18n %}
+
 
 
 {% block content %}
@@ -62,33 +64,21 @@
                             {{ product.description }}
                         </div>
                         <div role="tabpanel" class="tab-pane" id="delivery">
-                            <h3>Как мы делаем доставку. Когда вы закажете товар вы будете должны написать телефон<br>
-                                по этому телефону мы с вами свяжемся и спросим у вас куда нам доставить ваш заказ</h3>
+                            b jyubuybnuy
                         </div>
                         <div role="tabpanel" class="tab-pane" id="messages">
-                            <h2>Наше магазины находятся по адресу ...</h2>
+                            b jyubuybnuy
                         </div>
                         <div role="tabpanel" class="tab-pane" id="settings">
-
-                            Обновлено {{post.update}}<hr><br />
-                            <h4>Комментарии</h4>
-                            {% for comm in comment%}
-                                {{comm.user}} <br>
-                                {{comm.text}} <br><br>
-                            {%endfor%}
-
-{%comment%}
-{% for comm in post.commentpost_set.all%}
-    {{comm.user}} <br>
-    {{comm.text}} <br><br>
-{%endfor%}
-{%endcomment%}
-                            {% if user.is_active %}<p>
+                            {% if user.is_active %}
+                                <p>
                                 <form action="" method="post">
                                     {%csrf_token%}
-                                    {{form}}
+
+                                    {{ form }}
                                     <input type="submit" value="Отправить">
                                 </form>
+
                                 </p>
                             {%else%}
                                 <p> Что бы оставить комментарий,

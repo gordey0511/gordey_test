@@ -1,4 +1,3 @@
-
 {% for post in posts %}
     {{post.create}}<br />
     <a href="{% url 'post_single' pk=post.id %}">{{post.title}}</a><br />

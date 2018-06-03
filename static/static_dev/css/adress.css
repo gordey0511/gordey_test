@@ -1,0 +1,185 @@
+* {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+
+  .body-top100 {
+    color:#404040;
+    font:400 15px/22px 'Roboto slab', 'Georgia', Sans-serif;
+    margin:0;
+    padding:0;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1 {
+    font-size:20px;
+    margin:0;
+    font-weight:400;
+  }
+  a {
+    color:#404040;
+    text-decoration:none;
+  }
+  a:hover { color:#101010; }
+
+  .sidebar {
+    position:absolute;
+    width:33.3333%;
+    height:100%;
+    top:0;left:0;
+    overflow:hidden;
+    border-right:1px solid rgba(0,0,0,0.25);
+  }
+  .pad2 {
+    padding:20px;
+  }
+  .quiet {
+    color:#888;
+  }
+      .boxtop {
+    padding-left:10px;
+    padding-top:10px;
+    white-space: pre-wrap;
+    display:inline-block;
+  }
+.box {
+    padding-left:10px;
+    padding-top:5px;
+/*    padding-bottom: 10px;*/
+    white-space: pre-wrap;
+    display:inline-block;
+    font-weight: normal;
+  }
+      .url {
+    padding-left:10px;
+/*    padding-top:5px;*/
+    padding-bottom: 10px;
+    white-space: pre-wrap;
+    display:inline-block;
+    font-weight: normal;
+  }
+
+  .map-top100 {
+    position: absolute;
+    left:33.3333%;
+    width:66.6666%;
+    top:0;bottom:0;
+
+  }
+
+  .heading {
+    background:#fff;
+    border-bottom:1px solid #eee;
+    height:60px;
+    line-height:60px;
+    padding:0 10px;
+  }
+  .listings1 {
+    height:100%;
+    overflow:auto;
+    padding-bottom:100px;
+  }
+  .listings1 .item {
+    display:block;
+    border-bottom:1px solid #eee;
+    padding:10px;
+    text-decoration:none;
+  }
+  .listings1 .item:last-child { border-bottom:none; }
+  .listings1 .item .title {
+    display:block;
+    color:#00aced;
+    font-weight:700;
+  }
+  .listings1 .item .title small { font-weight:400; }
+  .listings1 .item.active .title,
+  .listings1 .item .title:hover { color:#0491c6; }
+  .listings1 .item.active {
+    background-color:#f8f8f8;
+  }
+
+  ::-webkit-scrollbar {
+    width:8px;
+    height:3px;
+    border-left:0;
+    background:rgba(0,0,0,0.1);
+  }
+  ::-webkit-scrollbar-track {
+    background:none;
+  }
+  ::-webkit-scrollbar-thumb {
+    background:#00aced;
+    border-radius:0;
+  }
+
+  .clearfix { display:block; }
+  .clearfix:after {
+    content:'.';
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+  }
+
+    img {
+    max-width:201px;
+    height:auto;
+    border-radius:3px 3px 0px 0px;
+    }
+
+  /* Marker tweaks */
+  .leaflet-popup-close-button {
+    display:none;
+  }
+  .leaflet-popup-content {
+    font:400 15px/22px 'Roboto Slab', 'Georgia', Sans-serif;
+    padding:0;
+    width:200px;
+  }
+  .leaflet-popup-content-wrapper {
+    padding:0;
+  }
+
+      .leaflet-popup-close-button+.leaflet-popup-content-wrapper .leaflet-popup-content{
+
+       padding-top: 0px !important;
+      }
+
+  .leaflet-popup-content h3 {
+    background:#00aced;
+    color:#fff;
+    margin:0;
+    display:block;
+    padding:18px 10px 10px 10px;
+/*    border-radius:3px 3px 0 0;*/
+    font-weight:700;
+    margin-top:-15px;
+  }
+  .leaflet-popup-content div {
+    padding:10px 10px 10px 10px;
+  }
+  .leaflet-container .leaflet-marker-icon { cursor:pointer; }
+
+@media only screen and (max-width: 460px) {
+    h1{
+    font-size: 16px;
+    }
+    .leaflet-popup-content {
+    font:400 15px/15px 'Roboto Slab', 'Georgia', Sans-serif;
+    padding:0;
+    width:150px;
+  }
+    img{
+        width:150px;
+    }
+    .sidebar {
+    display:none;
+  }
+     .map-top100 {
+    position:absolute;
+    left:0 !important;
+    width:100%;
+    top:0;bottom:0;
+  }
+}

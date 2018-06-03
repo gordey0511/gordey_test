@@ -1,3 +1,67 @@
-<div
-    ddmdd
-    <s.><s.>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>NOMNOM | Grid Experiment</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+           @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Work+Sans:500');
+        </style>
+        <link rel="stylesheet" href="{% static "css/test.css" %}">
+    </head>
+    <body>
+      <div class="wrpr">
+        <h1 class="logo">dreamclub</h1>
+        <div class="slider slider-food">
+          <div class="slider-food__item">
+            <div class="slider-food__item__content">
+              <div class="a">
+                <h1>01 Cheeseburger</h1>
+              </div>
+              <div class="c">
+                  <img src="https://allybaird.com/codepen/img/cheeseburger.svg" />
+              </div>
+              <div class="f">
+                <p>Prime Beef Patty, Cheese, Lettuce, Tomato, Pickled Onions, Ketchup, Chipotle Mayo, Brioche Bun.</p>
+                <p>£8.5</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-food__item">
+            <div class="slider-food__item__content">
+              <div class="a">
+                <h1>02 Hotdog</h1>
+              </div>
+              <div class="c">
+                <img src="https://allybaird.com/codepen/img/hotdog.svg" />
+              </div>
+              <div class="f">
+                <p>Pork Frankfurter, Caramelised Onions or Kraut, Toasted Brioche Sub, Ketchup, Mustard.</p>
+                <p>£7</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-food__item">
+            <div class="slider-food__item__content">
+              <div class="a">
+                <h1>03 French fries</h1>
+              </div>
+              <div class="c">
+                <img src="https://allybaird.com/codepen/img/fries.svg" />
+              </div>
+              <div class="f">
+                <p>Hand Cut, Jersey Royal Potatoes, Skins On, Trippled Cooked, Duck Fat, Rosemary Salt,  Chipotle Mayo.</p>
+                <p>£5.5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="https://allybaird.com/codepen/slick/slick.js"></script>
+      <script src="https://allybaird.com/codepen/slick/myslick.js"></script>
+      <script src="{% static 'js/test.js' %}"></script>
+    </body>
+</html>

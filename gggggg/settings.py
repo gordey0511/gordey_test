@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'bootstrap3',
 
+
     'add_image',
     'post',
     'landing',
