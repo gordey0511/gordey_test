@@ -1,4 +1,4 @@
-DEBUG = False
+DEBUG = True
 
 #settings for db on server
 DATABASES = {
