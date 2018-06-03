@@ -49,7 +49,7 @@ def checkout(request):
 
 
 
-    print(products_in_basket)
+    
     for item in products_in_basket:
         print(item.order)
 
@@ -72,7 +72,7 @@ def checkout(request):
                     product_in_basket_id = name.split("product_in_basket_")[1]
 
                     product_in_basket = ProductInBasket.objects.get(id=product_in_basket_id)
-                    
+
                     print(type(value))
 
                     product_in_basket.nmb = value
