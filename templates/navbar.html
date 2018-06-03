@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-top">
-        Наш сайт еще не доделан, но мы работаем)))
+
 </nav>
 <ul class="menu-main">
   <li><a href="http://dreamclubplay.com" class="current">Dream club</a></li>
@@ -25,7 +25,7 @@
                         {% for product_in_basket in products_in_basket %}
                                 <li>
                                     {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
-                                    по {{ product_in_basket.price_per_item }} руб. <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
+                                    по {{ product_in_basket.price_per_item }} бр. <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
                                 </li>
                         {% endfor %}
                     </ul>

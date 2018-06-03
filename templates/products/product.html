@@ -53,7 +53,7 @@
                         </li>
                         <li role="presentation">
                             <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
-                                Помощь
+                                Комментарии
                             </a>
                         </li>
                       </ul>
@@ -64,10 +64,10 @@
                             {{ product.description }}
                         </div>
                         <div role="tabpanel" class="tab-pane" id="delivery">
-                            b jyubuybnuy
+                            ...
                         </div>
                         <div role="tabpanel" class="tab-pane" id="messages">
-                            b jyubuybnuy
+                            ...
                         </div>
                         <div role="tabpanel" class="tab-pane" id="settings">
                             {% if user.is_active %}
@@ -76,10 +76,10 @@
                                     {%csrf_token%}
 
 
-                                    <input type="submit" value="Отправить">
+                                    <input type="submit" value="В разработке">
                                 </form>
 
-                                </p>
+
                             {%else%}
                                 <p> Что бы оставить комментарий,
                                     войдите на сайт</p>

@@ -6,3 +6,17 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = CommentPost
         fields = ('text',)
+from django import forms
+
+
+
+class CommentForm(forms.Form):
+    parent_comment = forms.IntegerField(
+        widget=forms.HiddenInput,
+        required=False
+    )
+
+    comment_area = forms.CharField(
+        label="",
+        widget=forms.Textarea
+    )

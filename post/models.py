@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+
 class Post(models.Model):
     '''Модель статей'''
     class Meta():
@@ -31,3 +32,20 @@ class CommentPost(models.Model):
     text = models.TextField("Текст комментария", max_length=500)
     created = models.DateTimeField("Добавлен", auto_now_add=True)
     moder = models.BooleanField("Модерация", default=False)
+
+# from django.db import models
+# from django.contrib import admin
+#
+# class BlogPost(models.Model):
+#     title = models.CharField(max_length=150)
+#     short_body = models.TextField()
+#     body = models.TextField()
+#     timestamp = models.DateTimeField()
+#     logo = models.ImageField(upload_to="static/")
+#     class Meta:
+#         ordering = ("-timestamp",)
+#
+# class BlogPostAdmin(admin.ModelAdmin):
+#     list_display = ("id", "title", "timestamp")
+#
+# admin.site.register(BlogPost, BlogPostAdmin)
