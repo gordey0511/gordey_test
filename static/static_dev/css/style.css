@@ -263,7 +263,7 @@ body {background: url(https://html5book.ru/wp-content/uploads/2015/07/background
   font-size: 18px;
   text-align: center;
   position: relative;
-  background: yellowgreen;
+  background: darkorange;
 }
 .menu-main:after {
   content: "";
@@ -272,7 +272,7 @@ body {background: url(https://html5book.ru/wp-content/uploads/2015/07/background
   height: 20px;
   left: 0;
   bottom: -20px;
-  background: radial-gradient(yellowgreen 0%, yellowgreen 70%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%) 0 -10px;
+  background: radial-gradient(darkorange 0%, darkorange 70%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%) 0 -10px;
   background-size: 20px 20px;
   background-repeat: repeat-x;
 }
@@ -295,7 +295,7 @@ body {background: url(https://html5book.ru/wp-content/uploads/2015/07/background
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #F58262;
+  background: #48ad6c;
   opacity: 0;
   transition: .5s ease-in-out;
 }
@@ -306,7 +306,7 @@ body {background: url(https://html5book.ru/wp-content/uploads/2015/07/background
 .menu-main a:hover:before,
 .menu-main a:hover:after {opacity: 1;}
 .menu-main a.current,
-.menu-main a:hover {color: #F58262;}
+.menu-main a:hover {color: #48ad6c;}
 @media(max-width:680px) {
   .menu-main li {display: block;}
 }
@@ -378,7 +378,10 @@ html, body{
     text-align: center;
     margin-bottom: 10px;
 }
-
+.logo-title{margin:50px auto;text-align:center;cursor: pointer}
+.logo-title a{text-decoration:none;-webkit-transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);-moz-transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);-ms-transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);-o-transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);-webkit-transition:all .5s;-moz-transition:all .5s;transition:all .5s;display:inline-block;text-align:center;text-transform:uppercase;font-size:75px;font-weight:700;font-family:'Exo 2';line-height:.8;color:#fbd62a;text-shadow:0 -1px 15px rgba(0,0,0,0.9),0 1px 0 #7f6303,0 3px 0 #846703,0 5px 0 #896b03,0 7px 0 #8e6f03,0 9px 0 #937203,0 6px 50px rgba(252,223,92,0.8)}
+.logo-title a:first-line{font-size:.8em}
+.logo-title a:hover{-webkit-transform:perspective(8em) rotateX(11deg) scale(1.2);-moz-transform:perspective(8em) rotateX(11deg) scale(1.2);-ms-transform:perspective(8em) rotateX(11deg) scale(1.2);-o-transform:perspective(8em) rotateX(11deg) scale(1.2);transform:perspective(8em) rotateX(11deg) scale(1.2);text-shadow:0 -1px 15px black,0 1px 0 #7f6303,0 2px 0 #846703,0 0 0 #896b03,0 1px 0 #8e6f03,0 2px 0 #937203,0 2px 30px rgba(252,223,92,0.6)}
 
 .discount-container{
     position: absolute;
@@ -411,7 +414,7 @@ html, body{
 .navbar-top{
     min-height: 10px;
     height: 20px;
-    background-color: yellowgreen;
+    background-color: darkorange;
     border: none;
     border-radius: 0;
 }

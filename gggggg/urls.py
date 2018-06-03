@@ -27,7 +27,8 @@ urlpatterns = [
 
     url(r'^', include('message.urls')),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^', include('post.urls'))
+    url(r'^', include('post.urls')),
+
 ] \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
               + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

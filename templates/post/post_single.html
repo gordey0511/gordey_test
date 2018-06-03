@@ -19,9 +19,7 @@
 {%endcomment%}
 {% if user.is_active %}
 <p>
-    <form action="" method="post">
-        {%csrf_token%}
-
+    <form action="" method="post">{%csrf_token%}
         {{ form }}
         <input type="submit" value="Отправить">
     </form>
