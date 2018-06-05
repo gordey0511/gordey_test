@@ -382,9 +382,11 @@ html, body{
 
 .discount-container{
     position: absolute;
-    top: 30%;
+    top: 0%;
+    margin-left: -20px;
+    margin-top: 0px;
     background: #55e073;
-    width: 30%;
+    width: 8%;
     color: white;
     font-weight: 700;
     padding: 3px;
@@ -539,7 +541,17 @@ html, body{
 }
 .price {
   font-family: "Open Sans";
-  color: #162546;
+  color: red;
   font-style: italic;
   font-weight: bold;
 }
+.price2 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #162546;
+  font-style: italic;
+  font-weight:normal;
+}
+
+
+
+
