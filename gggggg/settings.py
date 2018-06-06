@@ -43,8 +43,8 @@ if socket.gethostname() in DEVELOP_HOST_NAMES:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-else:
-    from .settings_prod import *
+# else:
+#     from .settings_prod import *
 
 # Application definition
 
@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'landing',
     'products',
     'orders',
+    'message',
 ]
 
 MIDDLEWARE = [
