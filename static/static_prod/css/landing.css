@@ -1,24 +1,29 @@
-html,body{
+html, body{
     height: 100%;
     max-height: 100%;
     font-family: 'Roboto', sans-serif;
 }
+
 .top-container{
     padding-top: 10%;
 }
+
 .general-container{
-    background-color:green;
+    background: url('../img/bg_image.jpg');
     height: 100%;
 }
+
 .general-container form{
-    margin-top: 20px;
+    margin-top: 30px;
 }
+
 .general-container form label{
     font-weight: 100;
-    color:white;
+    color: white;
 }
+
 .btn-orange{
-    background-color:green;
+    background-color: #e8643e;
     border: none;
 }
 
@@ -26,9 +31,10 @@ html,body{
     background-color: #dc5129;
     border: none;
 }
+
 .title{
     text-align: center;
-    color:white;
-    font-weight:100;
+    color: white;
+    font-weight: 100;
     line-height: 50px;
 }
