@@ -42,4 +42,19 @@ body {background: #F5E9D9;}
   text-transform: uppercase;
   transition: 1s cubic-bezier(.165, .84, .44, 1);
 }
+.form-row input[type="button"] {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: #F67CA5;
+  border-width: 0;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Playfair Display';
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #fffdee;
+  text-transform: uppercase;
+  transition: 1s cubic-bezier(.165, .84, .44, 1);
+}
 .form-row input[type=submit]:hover {background: #C42061;}
+.form-row input[type=button]:hover {background: #C42061;}
