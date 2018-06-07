@@ -18,40 +18,48 @@
 </head>
 <body>
 
-    <div class="general-container">
-        <div class="container top-container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="one"><h1>DREAM CLUB</h1></div>
-                    <h1 class="title">Наш магазин скоро откроется!<br>
-                    Оставляйте Ваш имейл в форме ниже</h1>
-                    <div>
-                        <form action="" method="post" class="form-inline text-center">{% csrf_token %}
-                         <div class="form-group">
-                             <label>Ваш имейл: </label>
-                             <input name="{{ form.email.name }}" class="form-control">
-                         </div>
-                         <div class="form-group">
-                             <label>Ваше имя: </label>
-                             <input name="{{ form.name.name }}" class="form-control">
-                         </div>
-                         <button type="submit" href="http://178.128.161.17/"
-                                 class="transform-button"><span>Отправить</span></button>
-                         <input type="button" value="Вернуться на сайт" class="navbar-button"
-                                onclick="product:window.location='http://178.128.161.17/'"/>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="container">
+	<header>
+		<h1>
+			Dream Club
+		</h1>
+	</header>
+	<h1 class="text-center">Регистрация</h1>
+	<form class="registration-form">
+		<label class="col-one-half">
+			<span class="label-text">Имя</span>
+			<input type="text" name="firstName">
+		</label>
+		<label class="col-one-half">
+			<span class="label-text">Фамилия</span>
+			<input type="text" name="{{ form.name.name }}">
+		</label>
+		<label>
+			<span class="label-text">Email</span>
+			<input type="text" name="{{ form.email.name }}">
+		</label>
+		<label class="password">
+			<span class="label-text">Пароль</span>
+			<button class="toggle-visibility" title="toggle password visibility" tabindex="-1">
+				<span class="glyphicon glyphicon-eye-close"></span>
+			</button>
+			<input type="password" name="password">
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" name="newsletter">
+			<span>Мы работаем ради вас</span>
+		</label>
+		<div class="text-center">
+			<button class="submit" name="register">Отправить</button>
+		</div>
+	</form>
+</div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-
+    <script src="{% static 'js/scripts_2.js' %}"></script>
 </body>
 </html>
