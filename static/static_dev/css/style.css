@@ -326,6 +326,13 @@ html, body{
     color: white;
 }
 
+.navbar-button{
+    background-color: #55e073;
+    border: none;
+    color: #d3fb05e8;
+    border-radius: 0;
+    padding: 15px ;
+}
 
 
 .navbar-top{
