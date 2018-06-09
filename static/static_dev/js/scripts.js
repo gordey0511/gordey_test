@@ -1,22 +1,22 @@
 $(document).ready(function(){
-    form = $('#form_buying_product');
+    var form = $('#form_buying_product');
     console.log(form);
 
 
     function basketUpdating(product_id, nmb, is_delete){
-        data = {};
+        var data = {};
         data.product_id = product_id;
         data.nmb = nmb;
-        csrf_token = $('#form_buying_product [name="csrfmiddlewaretoken"]').val();
-        data["csrfmiddlewaretoken"] = csrf_token;
+         var csrf_token = $('#form_buying_product [name="csrfmiddlewaretoken"]').val();
+         data["csrfmiddlewaretoken"] = csrf_token;
 
         if (is_delete){
             data["is_delete"] = true;
         }
 
-        url = form.attr("action");
+         var url = form.attr("action");
 
-        console.log(data);
+        console.log(data)
          $.ajax({
              url: url,
              type: 'POST',
@@ -30,7 +30,7 @@ $(document).ready(function(){
                      console.log(data.products);
                      $('.basket-items ul').html("");
                      $.each(data.products, function(k, v){
-                        $('.basket-items ul').append('<li>'+ v.name+', ' + v.nmb + 'шт. ' + 'по ' + v.price_per_item + 'руб  ' +
+                        $('.basket-items ul').append('<li>'+ v.name+', ' + v.nmb + 'шт. ' + 'по ' + v.price_per_item + 'грн  ' +
                             '<a class="delete-item" href="" data-product_id="'+v.id+'">x</a>'+
                             '</li>');
                      });
@@ -47,12 +47,12 @@ $(document).ready(function(){
     form.on('submit', function(e){
         e.preventDefault();
         console.log('123');
-        nmb = $('#number').val();
+        var nmb = $('#number').val();
         console.log(nmb);
-        submit_btn = $('#submit_btn');
-        product_id =  submit_btn.data("product_id");
+        var submit_btn = $('#submit_btn');
+        var product_id =  submit_btn.data("product_id");
         var name = submit_btn.data("name");
-        price = submit_btn.data("price");
+        var price = submit_btn.data("price");
         console.log(product_id );
         console.log(name);
 
@@ -84,24 +84,30 @@ $(document).ready(function(){
          basketUpdating(product_id, nmb, is_delete=true)
      });
 
-     function calculatingBasketAmount(){
-        total_order_amount = 0;
+    function calculatingBasketAmount(){
+        var total_order_amount = 0;
         $('.total-product-in-basket-amount').each(function() {
             total_order_amount = total_order_amount + parseFloat($(this).text());
         });
         console.log(total_order_amount);
-         $('#total_order_amount').text(total_order_amount.toFixed(2));
-     }
+        $('#total_order_amount').text(total_order_amount.toFixed(2));
+    };
 
-     $(document).on('change', ".product-in-basket-nmb", function(){
-        current_nmb = $(this).val();
+    $(document).on('change', ".product-in-basket-nmb", function(){
+        var current_nmb = $(this).val();
         console.log(current_nmb);
-        current_tr = $(this).closest('tr');
-        current_price = parseFloat(current_tr.find('.product-price').text()).toFixed(2);
-        total_amount = parseFloat(current_nmb*current_price).toFixed(2);
+
+        var current_tr = $(this).closest('tr');
+        var current_price = parseFloat(current_tr.find('.product-price').text()).toFixed(2);
+        console.log(current_price);
+        var total_amount = parseFloat(current_nmb*current_price).toFixed(2);
+        console.log(total_amount);
         current_tr.find('.total-product-in-basket-amount').text(total_amount);
 
         calculatingBasketAmount();
     });
-     calculatingBasketAmount();
+
+
+    calculatingBasketAmount();
+
 });

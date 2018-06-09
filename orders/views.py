@@ -49,15 +49,23 @@ def checkout(request):
     for item in products_in_basket:
         print(item.order)
 
-
     form = CheckoutContactForm(request.POST or None)
     if request.POST:
         print(request.POST)
         if form.is_valid():
             print("yes")
             data = request.POST
+
             name = data.get("name", "3423453")
             phone = data["phone"]
+            product_id = data.get("product_id")
+            print(product_id)
+
+            is_delete = data.get("is_delete")
+            print(is_delete)
+
+            if is_delete == 'true':
+                ProductInBasket.objects.filter(id=product_id).update(is_active=False)
             user, created = User.objects.get_or_create(username=phone, defaults={"first_name": name})
 
             order = Order.objects.create(user=user, customer_name=name, customer_phone=phone, status_id=1)
