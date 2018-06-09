@@ -7,8 +7,8 @@
 {% block content-title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p></p>
+<p>{% blocktrans %}Уже есть аккаунт? Тогда, пожалуйста<a href="{{ login_url }}"> войдите</a>.{% endblocktrans %}</p>
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
