@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
 {% load static %}
 
 
@@ -66,7 +69,32 @@
                             <h2>Наше магазины находятся по адресу ...</h2>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="settings">
-                            Помочь или сообщить об ошибки вы можете написав мне в вконтакте на id271711683
+
+                            Обновлено {{post.update}}<hr><br />
+                            <h4>Комментарии</h4>
+                            {% for comm in comment%}
+                                {{comm.user}} <br>
+                                {{comm.text}} <br><br>
+                            {%endfor%}
+
+{%comment%}
+{% for comm in post.commentpost_set.all%}
+    {{comm.user}} <br>
+    {{comm.text}} <br><br>
+{%endfor%}
+{%endcomment%}
+                            {% if user.is_active %}<p>
+                                <form action="" method="post">
+                                    {%csrf_token%}
+                                    {{form}}
+                                    <input type="submit" value="Отправить">
+                                </form>
+                                </p>
+                            {%else%}
+                                <p> Что бы оставить комментарий,
+                                    войдите на сайт</p>
+                            {%endif%}
+
                         </div>
                       </div>
                 </div>

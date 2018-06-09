@@ -3,9 +3,12 @@
 </nav>
 <ul class="menu-main">
   <li><a href="http://178.128.161.17" class="current">Dream club</a></li>
+  {% if not user.is_active %}
   <li><a href="/accounts/login/">Авторизация</a></li>
   <li><a href="/accounts/signup/">Регистрация</a></li>
-  <li><a href="/accounts/logout/">Выйти</a></li>
+  {% else %}
+  <li><a href="/accounts/logout/">({{ user.username }}) Выйти</a></li>
+  {% endif %}
   <li><a type="button" onclick="product:window.location='/checkout/'" href="/checkout/">Заказать товар</a></li>
   <li><a href="/message/">Написать нам</a></li>
   <li>
