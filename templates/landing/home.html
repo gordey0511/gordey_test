@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="wrap">
+      <div class="cat">
+        <span>Dream club</span>
+      </div>
+      <h2> Факт дня</h2>
+      <div class="post">
+        <span class="public">10 Июня, 2018</span>
+        <p>Игра в шахматы в Древней Индии могла закончиться очень плачевно для одного из участников. По правилам
+            побежденный должен был пожертвовать одним пальцем на руке.</p>
+        <a class="more-link" href="#">
+        <span class="more-button">read</span>
+        </a>
+      </div>
+    </div>
+    <div class="section section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="three">
+                        <h1 class="text-center">
+                            Новые поступления
+                        </h1>
+                    </div>
+                </div>
+                {% for product_image in products_images %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor%}
+
+            </div>
+        </div>
+    </div>
+    <div class="section section-delivery">
+        <div>
+            <h3>Free shipping</h3>
+        </div>
+    </div>
+    <div class="section section2 phones-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="three">
+                        <h1 class="text-center">
+                            Дешевые игры
+                        </h1>
+                    </div>
+                </div>
+                {% for product_image in products_images_phones %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor%}
+
+            </div>
+        </div>
+    </div>
+    <div class="section section3 laptops-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="three">
+                        <h1 class="text-center">
+                            Популярные игры
+                        </h1>
+                    </div>
+                </div>
+                {% for product_image in products_images_laptops %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor%}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
