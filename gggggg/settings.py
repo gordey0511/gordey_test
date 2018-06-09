@@ -54,7 +54,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
+    'allauth',
+    'allauth.account',
+    'bootstrap3',
+
+    'add_image',
+    'post',
     'landing',
     'products',
     'orders',
@@ -93,8 +100,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'gggggg.wsgi.application'
 
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/accounts/login/'  # Страница, на которую перенаправляются пользователи, если они не вошли в
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -123,6 +140,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+SITE_ID = 1
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
