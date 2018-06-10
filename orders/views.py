@@ -31,7 +31,7 @@ def basket_adding(request):
 
     return_dict["products"] = list()
 
-    for item in  products_in_basket:
+    for item in products_in_basket:
         product_dict = dict()
         product_dict["id"] = item.id
         product_dict["name"] = item.product.name
@@ -45,7 +45,10 @@ def basket_adding(request):
 def checkout(request):
     session_key = request.session.session_key
     products_in_basket = ProductInBasket.objects.filter(session_key=session_key, is_active=True, order__isnull=True)
-    print (products_in_basket)
+
+
+
+    print(products_in_basket)
     for item in products_in_basket:
         print(item.order)
 
@@ -58,14 +61,7 @@ def checkout(request):
 
             name = data.get("name", "3423453")
             phone = data["phone"]
-            product_id = data.get("product_id")
-            print(product_id)
 
-            is_delete = data.get("is_delete")
-            print(is_delete)
-
-            if is_delete == 'true':
-                ProductInBasket.objects.filter(id=product_id).update(is_active=False)
             user, created = User.objects.get_or_create(username=phone, defaults={"first_name": name})
 
             order = Order.objects.create(user=user, customer_name=name, customer_phone=phone, status_id=1)
@@ -73,12 +69,18 @@ def checkout(request):
             for name, value in data.items():
                 if name.startswith("product_in_basket_"):
                     product_in_basket_id = name.split("product_in_basket_")[1]
+                    print(product_in_basket_id)
                     product_in_basket = ProductInBasket.objects.get(id=product_in_basket_id)
+                    ProductInBasket.objects.update(is_active=False)
                     print(type(value))
 
                     product_in_basket.nmb = value
                     product_in_basket.order = order
                     product_in_basket.save(force_update=True)
+                    ProductInBasket.objects.create(product=product_in_basket.product, nmb=product_in_basket.nmb,
+                                                  price_per_item=product_in_basket.price_per_item,
+                                                  total_price=product_in_basket.total_price,
+                                                  order=order,is_active=False)
 
                     ProductInOrder.objects.create(product=product_in_basket.product, nmb = product_in_basket.nmb,
                                                   price_per_item=product_in_basket.price_per_item,
