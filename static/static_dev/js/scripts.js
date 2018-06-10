@@ -62,7 +62,7 @@ $(document).ready(function(){
 
     function showingBasket(){
         $('.basket-items').removeClass('hidden');
-    }
+    };
 
     //$('.basket-container').on('click', function(e){
     //    e.preventDefault();
@@ -79,7 +79,7 @@ $(document).ready(function(){
 
      $(document).on('click', '.delete-item', function(e){
          e.preventDefault();
-         product_id = $(this).data("product_id");
+         product_id = $(this).data("product_id")
          nmb = 0;
          basketUpdating(product_id, nmb, is_delete=true)
      });

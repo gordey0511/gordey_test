@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from products.models import *
+from django.views.decorators.csrf import csrf_exempt,csrf_protect #Add this
 
 
 def product(request, product_id):
