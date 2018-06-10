@@ -15,7 +15,7 @@ def basket_adding(request):
     is_delete = data.get("is_delete")
 
     if is_delete == 'true':
-        ProductInBasket.objects.filter(id=product_id).update(is_active=False)
+        ProductInBasket.objects.filter(product_id=product_id).update(is_active=False)
     else:
         new_product, created = ProductInBasket.objects.get_or_create(session_key=session_key, product_id=product_id,
                                                                      is_active=True, defaults={"nmb": nmb})
@@ -71,7 +71,7 @@ def checkout(request):
                     product_in_basket_id = name.split("product_in_basket_")[1]
                     print(product_in_basket_id)
                     product_in_basket = ProductInBasket.objects.get(id=product_in_basket_id)
-                    ProductInBasket.objects.update(is_active=False)
+                    ProductInBasket.objects.filter(product_id=product_in_basket_id).update(is_active=False)
                     print(type(value))
 
                     product_in_basket.nmb = value
