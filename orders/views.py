@@ -71,16 +71,14 @@ def checkout(request):
                     product_in_basket_id = name.split("product_in_basket_")[1]
                     print(product_in_basket_id)
                     product_in_basket = ProductInBasket.objects.get(id=product_in_basket_id)
-                    ProductInBasket.objects.filter(product_id=product_in_basket_id).update(is_active=False)
+
                     print(type(value))
 
                     product_in_basket.nmb = value
                     product_in_basket.order = order
+                    product_in_basket.is_active = False
                     product_in_basket.save(force_update=True)
-                    ProductInBasket.objects.create(product=product_in_basket.product, nmb=product_in_basket.nmb,
-                                                  price_per_item=product_in_basket.price_per_item,
-                                                  total_price=product_in_basket.total_price,
-                                                  order=order,is_active=False)
+
 
                     ProductInOrder.objects.create(product=product_in_basket.product, nmb = product_in_basket.nmb,
                                                   price_per_item=product_in_basket.price_per_item,
