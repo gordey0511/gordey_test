@@ -69,8 +69,7 @@ class ProductInOrder(models.Model):
 
 
 def product_in_order_post_save(sender, instance, created, **kwargs):
-    order_2 = instance.order_2
-    all_products_in_order = ProductInOrder.objects.filter(order=order_2, is_active=True)
+    all_products_in_order = ProductInOrder.objects.filter(order=instance.order, is_active=True)
 
     order_total_price = 0
     for item in all_products_in_order:
