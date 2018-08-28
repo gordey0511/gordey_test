@@ -16,7 +16,7 @@ $(document).ready(function(){
 
          var url = form.attr("action");
 
-        console.log(data)
+        console.log(data);
          $.ajax({
              url: url,
              type: 'POST',
@@ -25,7 +25,7 @@ $(document).ready(function(){
              success: function (data) {
                  console.log("OK");
                  console.log(data.products_total_nmb);
-                 if (data.products_total_nmb || data.products_total_nmb == 0){
+                 if (data.products_total_nmb || data.products_total_nmb === 0){
                     $('#basket_total_nmb').text("("+data.products_total_nmb+")");
                      console.log(data.products);
                      $('.basket-items ul').html("");
@@ -62,24 +62,24 @@ $(document).ready(function(){
 
     function showingBasket(){
         $('.basket-items').removeClass('hidden');
-    };
+    }
 
-    //$('.basket-container').on('click', function(e){
+    // $('.basket-container').on('click', function(e){
     //    e.preventDefault();
     //    showingBasket();
-    //});
+    // });
 
-     $('.basket-container').mouseover(function(){
-         showingBasket();
+     // $('.basket-container').mouseover(function(){
+     //     showingBasket();
+     // });
+
+     $('.basket-container').mouseout(function(){
+        showingBasket();
      });
-
-     //$('.basket-container').mouseout(function(){
-     //    showingBasket();
-     //});
 
      $(document).on('click', '.delete-item', function(e){
          e.preventDefault();
-         product_id = $(this).data("product_id")
+         product_id = $(this).data("product_id");
          nmb = 0;
          basketUpdating(product_id, nmb, is_delete=true)
      });
@@ -91,7 +91,7 @@ $(document).ready(function(){
         });
         console.log(total_order_amount);
         $('#total_order_amount').text(total_order_amount.toFixed(2));
-    };
+    }
 
     $(document).on('change', ".product-in-basket-nmb", function(){
         var current_nmb = $(this).val();

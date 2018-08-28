@@ -13,7 +13,7 @@
   <li><a href="/message/">Написать нам</a></li>
   <li>
                 <div class="basket-container">
-                    <a href="">Корзина<span id="basket_total_amount"></span><span id="basket_total_nmb">
+                    <a href="/checkout/">Корзина<span id="basket_total_amount"></span><span id="basket_total_nmb">
                         {% if products_total_nmb %}
                             ({{ products_total_nmb }})
                         {% else %}
@@ -25,8 +25,7 @@
                         {% for product_in_basket in products_in_basket %}
                                 <li>
                                     {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
-                                    по {{ product_in_basket.price_per_item }} руб.
-                                    <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
+                                    по {{ product_in_basket.price_per_item }} руб. <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
                                 </li>
                         {% endfor %}
                     </ul>

@@ -49,7 +49,7 @@ def checkout(request):
 
 
 
-    
+
     for item in products_in_basket:
         print(item.order)
 
